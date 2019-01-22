@@ -554,7 +554,7 @@ function AC_AutoChimpOptions()
 function AC_ManageMailUser( $mode, $user_info, $old_user_data, $writeDBMessages )
 {
 	$apiKey = get_option( WP88_MC_APIKEY );
-	$api = new MCAPI_13( $apiKey );
+	$api = new MCAPI_13( $apiKey, true );
 
 	$myLists = $api->lists();
 	$errorCode = 0;
@@ -915,7 +915,7 @@ function AC_OnPublishPost( $postID )
 				{
 					// Create an instance of the MailChimp API
 					$apiKey = get_option( WP88_MC_APIKEY );
-					$api = new MCAPI_13( $apiKey );
+					$api = new MCAPI_13( $apiKey, true );
 		
 					// Do the work
 					$id = AC_CreateCampaignFromPost( $api, $postID, $categoryMailingList, $categoryGroupName, $categoryTemplateID );

@@ -92,7 +92,7 @@ if ( $active_tab == 'mailing_lists' )
 	if ( !empty( $apiKey ) )
 	{
 		// Create an object to interface with MailChimp
-		$api = new MCAPI_13( $apiKey );
+		$api = new MCAPI_13( $apiKey, true );
 	
 		// This array holds the lists that have been selected
 		$listArray = array();
@@ -291,7 +291,7 @@ if ( $active_tab == 'campaigns' )
 	else 
 	{
 		// Create an object to interface with MailChimp
-		$api = new MCAPI_13( $apiKey );
+		$api = new MCAPI_13( $apiKey, true );
 	
 		// This array holds the lists that have been selected
 		$listArray = array();	
